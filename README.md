@@ -1,5 +1,7 @@
 # Build synouidmod
-This script will build the [synouidmod](https://github.com/sunnyone/synouidmod) binary for your Synology DSM version and platform.
+This script uses Docker to build the [synouidmod](https://github.com/sunnyone/synouidmod) binary for your Synology DSM version and platform.
+
+Depending on your hardware, it may take a while to complete. After the message "Available platforms" it may seem like the system hangs but it is not.
 
 # How to use
 Git clone this repository.
