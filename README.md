@@ -3,6 +3,8 @@ This script uses Docker to build the [synouidmod](https://github.com/sunnyone/sy
 
 Depending on your hardware, it may take a while to complete. After the message "Available platforms" it may seem like the system hangs but it is not.
 
+For more information about the Synology Build Environment see the [Synology Developer Guide](https://help.synology.com/developer-guide).
+
 # How to use
 Git clone this repository.
 ```
@@ -31,6 +33,28 @@ After completion the ````synouidmod```` binary will be in the directory ````./ou
 
 You can copy this file to the directory ````/usr/local/sbin```` on your Synology.
 
+# Access the build enviroment
+After the build, you can access the build environment with the following ````docker run```` command.
+````
+$ docker run -it --rm --name synobuild synobuild
+root@397b92bfbecd:/toolkit/build_env/ds.braswell-6.2# ls
+PkgVersion  boot  etc   lib    mnt  pkgscripts  root  sbin    srv  tmp  var
+bin         dev   home  lib64  opt  proc        run   source  sys  usr
+root@397b92bfbecd:/toolkit/build_env/ds.braswell-6.2# exit
+exit
+$
+````
+# Cleanup
+because the image can be quite large, you can also delete it if you no longer need it.
+````
+$ docker image ls synobuild
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+synobuild           latest              2568d28931d8        2 hours ago         7.93GB
+$ docker image rm synobuild
+Untagged: synobuild:latest
+Deleted: sha256:2568d28931d86d6d4c23506b9bf0dba54ef62ca833197df7fa96b77443fe4bb8
+$
+````
 # Remarks
 During the build the available platforms for the selected DSM version are listed.
 
@@ -64,3 +88,6 @@ At the time of writing the available platforms for DSM 6.2 are:
 * rtd1296
 * v1000
 * x64
+
+# Acknowledgements
+All credit goes to [sunnyone](https://github.com/sunnyone) for writing this handy utility.
