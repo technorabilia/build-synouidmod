@@ -33,7 +33,7 @@ After completion the ````synouidmod```` binary will be in the directory ````./ou
 
 You can copy this file to the directory ````/usr/local/sbin```` on your Synology.
 
-# Access the build enviroment
+# Access the build environment
 After the build, you can access the build environment with the following ````docker run```` command.
 ````
 $ docker run -it --rm --name synobuild synobuild
@@ -45,7 +45,7 @@ exit
 $
 ````
 # Cleanup
-because the image can be quite large, you can also delete it if you no longer need it.
+Because the image can be quite large, you can also delete it if you no longer need it.
 ````
 $ docker image ls synobuild
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
