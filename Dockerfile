@@ -2,6 +2,8 @@ FROM ubuntu:20.04
 
 ARG VERSION
 ARG PLATFORM
+ENV VERSION $VERSION
+ENV PLATFORM $PLATFORM
 
 RUN apt-get update && \
   apt-get install -y git python3
