@@ -3,6 +3,8 @@ This script uses Docker to build the [synouidmod](https://github.com/sunnyone/sy
 
 Depending on your hardware, it may take a while to complete. After the message "Available platforms" it may seem like the system hangs but it is not.
 
+You can also check [here](https://github.com/technorabilia/build-synouidmod/tree/main/output) if a binary is already available. If so, you can use it and you don't have to compile it yourself.
+
 For more information about the Synology Build Environment see the [Synology Developer Guide](https://help.synology.com/developer-guide).
 
 # How to use
