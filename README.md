@@ -7,6 +7,13 @@ You can also check [here](https://github.com/technorabilia/build-synouidmod/tree
 
 For more information about the Synology Build Environment see the [Synology Developer Guide](https://help.synology.com/developer-guide).
 
+# Findings for synouidmod ⚠️
+* Before you start, read the [README](https://github.com/sunnyone/synouidmod#readme) of ````synouidmod````
+* Backup ````/var/run/synosdk```` before using ````synouidmod````
+* Changing a user with a ````UID```` less than or equal to ````1024```` is not recommended
+* Using a ````UID```` less than or equal to ````1024```` is not recommended
+* Binaries built for the ````x86```` architecture (e.g. Intel and AMD processors) can probably be used interchangeably.
+
 # How to use
 Git clone this repository.
 ```
@@ -22,7 +29,7 @@ $
 ````
 In this case the version number is ````6.2```` and the platform is ```braswell```.
 
-Change the VERSION and PLATFORM in ````build.sh```` appropriately.
+Change the ````VERSION```` and ````PLATFORM```` in ````build.sh```` appropriately.
 ```
 VERSION=6.2
 PLATFORM=braswell
