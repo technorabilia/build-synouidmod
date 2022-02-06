@@ -1,6 +1,6 @@
-Possible alternative to `synouidmod`: ⚠️
-
-Edit `/etc/passwd` and `/etc/group` manually and use `synouser --rebuild all` to synchronize. 
+# Before you start
+* At the moment this only works on DSM versions that are listed in [this](https://github.com/SynologyOpenSource/pkgscripts-ng/blob/master/include/toolkit.config) file
+* A possible alternative to `synouidmod` is editing `/etc/passwd` and `/etc/group` manually and use `synouser --rebuild all` to synchronize
 
 # Build synouidmod
 This script uses Docker to build the [synouidmod](https://github.com/sunnyone/synouidmod) binary for your Synology DSM version and platform.
