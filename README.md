@@ -24,13 +24,13 @@ Git clone this repository.
 git clone https://github.com/technorabilia/build-synouidmod.git
 ```
 Check your DSM version and platform.
-`
+```
 $ uname -a
 Linux DS716 3.10.105 #25556 SMP Thu Mar 4 18:00:29 CST 2021 x86_64 GNU/Linux synology_braswell_716+
 $ grep productversion /etc.defaults/VERSION
 productversion="6.2.4"
 $
-`
+```
 In this case the version number is `6.2` and the platform is ```braswell```.
 
 Change the `VERSION` and `PLATFORM` in `build.sh` appropriately.
